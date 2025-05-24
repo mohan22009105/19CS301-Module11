@@ -1,85 +1,57 @@
-# Exp.no: 54
-## DOUBLE LINKED LIST-2
+# 19CS301-Module11
+### EX: 11 a Singly Linked List (Traversal, Search and Delete)
 
-### AIM
+### Aim: Write a function to traverse the linked list and display it in the following format.
 
-To type a python function to insert elements at the beginning of the doubly linked list. 
+### Algorithm:
 
-### ALORITHM 
+STEP 1: Start.
 
-1. Start the program.
+STEP 2: Create a node class and object of the node.
 
-2. Create a Node class with data, next (nref), and previous (pref) links.
+STEP 3: Create another class to use the node object.
 
-3. Create a DoublyLinkedList class with start_node set to None.
+STEP 4 : Using data traversing traverse from first to last data element .
 
-4. To insert in an empty list:
-   Create a node and assign it to start_node if the list is empty.
+STEP 5 : Print the data.
 
-5. To insert at the start:
-   Create a new node.
-   Point its nref to current start_node.
-   Point current start_node.pref to the new node.
-   Update start_node to the new node.
+STEP 6 : Stop.
 
-6. print the list:
-
-7. Traverse and print the list.
-
-8. Terminate the program.
-   
-### PROGRAM
-
+### Program:
 ```
 class Node:
-    def __init__(self, data):
-        self.item = data
-        self.nref = None
-        self.pref = None
+      def     init (self, data=None):
+            self.data = data
+            self.next = None
 
-class DoublyLinkedList:
-    def __init__(self):
-        self.start_node = None
 
-    def insert_in_emptylist(self, data):
-        if self.start_node is None:
-            new_node = Node(data)
-            self.start_node = new_node
-        else:
-            print("list is not empty")
-            
-    def insert_at_start(self, data):
-        if self.start_node is None:
-            new_node=Node(data)
-            self.start_node=new_node
-            print("node inserted")
-            return
-        new_node=Node(data)
-        new_node.nref=self.start_node
-        self.start_node.pref=new_node
-        self.start_node=new_node
-        
-    def traverse_list(self):
-        if self.start_node is None:
-            print("List has no element")
-            return
-        else:
-            n = self.start_node
-            while n is not None:
-                print(n.item , " ")
-                n = n.nref
-                
-new_linked_list = DoublyLinkedList()
-new_linked_list.insert_in_emptylist(40)
-new_linked_list.insert_at_start(30)
-new_linked_list.insert_at_start(20)
-new_linked_list.insert_at_start(10)
-new_linked_list.traverse_list()
+class SLinkedList:
+       def      init (self):
+             self.head = None
+
+       def listprint(self):
+             printval = self.head
+             while printval is not None:
+                    print(printval.data)
+                    printval = printval.next
+
+ list = SLinkedList()
+list.head = Node("Mon")
+e2 = Node("Tue")
+e3 = Node("Wed")
+
+# Link first Node to second node list.head.next = e2
+
+# Link second Node to third node e2.next = e3
+
+list.listprint()
+
 ```
+### Output:
+![image](https://github.com/user-attachments/assets/f7547c51-0a61-45c2-93da-48fbb60de473)
 
-### OUTPUT
 
-![image](https://github.com/user-attachments/assets/12297de1-a2ac-4e1f-84a2-e130ef23110e)
+### Result: Thus, the given program is implemented and executed successfully .
+ 
 
-### RESULT
-Thus the python program was successfully created.
+
