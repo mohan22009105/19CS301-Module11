@@ -20,6 +20,9 @@ STEP 6 : Stop.
 
 ### Program:
 ```
+Reg no-212223070007
+Name-Gopinath G
+
 class Node:
             def     __init__ (self, data):
                   self.data = data
@@ -58,7 +61,8 @@ MyList.PrintList()
 
 
 
-### Result: Thus, the given program is implemented and executed successfully .
+### Result: 
+Thus the python program to add new element at the start of the list was executed successfully .
  
 
 
